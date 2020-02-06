@@ -1,13 +1,12 @@
 import smtplib
 
 #send_email function
-def send_email(subject, msg):
+def send_email(subject, msg, TO_EMAIL_ADDRESS):
     
     #define the email address and password to login in server
     #change the email and password before using
     FROM_EMAIL_ADDRESS = "xyz@gmail.com" 
     PASSWORD = "123456"
-    TO_EMAIL_ADDRESS = "abc@gmail.com"
 
     try: 
         server = smtplib.SMTP('smtp.gmail.com:587')
@@ -26,4 +25,4 @@ subject = "Test subject"
 msg = "hello there, how are you today?"
 
 #executing the script
-send_email(subject, msg)
+send_email(subject, msg, "xyz@gmail.com")
